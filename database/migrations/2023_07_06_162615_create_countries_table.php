@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sub_services', function (Blueprint $table) {
-            $table->id();
+        Schema::create('countries', function (Blueprint $table) {
+            $table->id('country_id');
+            $table->string('name', 30)->unique();
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub_services');
+        Schema::dropIfExists('countries');
     }
 };

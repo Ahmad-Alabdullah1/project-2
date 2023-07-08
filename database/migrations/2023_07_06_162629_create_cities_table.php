@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('service_providers', function (Blueprint $table) {
-            $table->id();
+        Schema::create('cities', function (Blueprint $table) {
+            $table->id('city_id');
+            $table->string('name', 30);
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service_providers');
+        Schema::dropIfExists('cities');
     }
 };

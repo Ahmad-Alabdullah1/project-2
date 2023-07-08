@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('company_notification_jobs', function (Blueprint $table) {
+        Schema::create('s_p_notifications', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('company_notification_jobs');
+        Schema::dropIfExists('s_p_notifications');
     }
 };

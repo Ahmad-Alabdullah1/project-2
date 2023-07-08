@@ -14,7 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('regions', function (Blueprint $table) {
-            $table->id();
+            $table->id('address_id');
+           // $table->string('addressName');
+            $table->integer('city_id')->unsigned();
+            $table->string('regionName');
+            $table->text('details')->nullable();
+            $table->float('GPS')->nullable();
+            $table->foreign('city_id')->references('city_id')->on('cities');
             $table->timestamps();
         });
     }

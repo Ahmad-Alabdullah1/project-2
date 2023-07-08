@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('jop_applications', function (Blueprint $table) {
-            $table->id();
+        Schema::create('service_providers', function (Blueprint $table) {
+
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jop_applications');
+        Schema::dropIfExists('service_providers');
     }
 };
